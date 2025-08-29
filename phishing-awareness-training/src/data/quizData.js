@@ -49,7 +49,7 @@ const quiz = [
         options: [
             {text: ".TXT"},
             {text: ".PDF"},
-            {text: ".EXE", correct: true},
+            {text: ".EXE", correct: true}
         ]
     },
     {

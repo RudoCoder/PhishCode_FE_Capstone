@@ -8,7 +8,7 @@ import slides from './data/slidesData';
 import quizData from './data/quizData';
 import './App.css';
 
-export default function App() {
+function App() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [mode, setMode] = useState('slides'); // 'slides' | 'quiz'
 
@@ -53,3 +53,5 @@ export default function App() {
     </div>
   );
 }
+
+export default App;

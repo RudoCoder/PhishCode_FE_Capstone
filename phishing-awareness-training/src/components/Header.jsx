@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Header({ onStart = () => {}, onHome = () => {} }) {
+function Header({ onStart = () => {}, onHome = () => {} }) {
     return (
         <header className="site-header">
             <div className="container header-inner">
@@ -15,3 +15,4 @@ export default function Header({ onStart = () => {}, onHome = () => {} }) {
         </header>
     );
 }
+export default Header;

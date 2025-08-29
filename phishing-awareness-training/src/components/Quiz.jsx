@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import ProgressBar from './ProgressBar';
 import Result from './Result';
 
-export default function Quiz({ quiz = [], onBack = () => {} }) {
+function Quiz({ quiz = [], onBack = () => {} }) {
     const total = quiz.length;
     const [current, setCurrent] = useState(0);
     const [answers, setAnswers] = useState(() => {
@@ -118,3 +118,5 @@ export default function Quiz({ quiz = [], onBack = () => {} }) {
     </section>
   );
 }
+
+export default Quiz;

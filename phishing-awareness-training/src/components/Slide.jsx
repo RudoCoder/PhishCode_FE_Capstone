@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Slide({ slide = {}, index = 0, total = 0 }) {
+function Slide({ slide = {}, index = 0, total = 0 }) {
   if (!slide) return null;
 
   return (
@@ -24,3 +24,5 @@ export default function Slide({ slide = {}, index = 0, total = 0 }) {
     </section>
   );
 }
+
+export default Slide;

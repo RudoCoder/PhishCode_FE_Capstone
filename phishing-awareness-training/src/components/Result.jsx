@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Result({ score = 0, total = 0, onRetry = () => {} }) {
+function Result({ score = 0, total = 0, onRetry = () => {} }) {
     const pass = total > 0 ? score / total >= 0.7 : false;
     return (
         <div className="result-card">
@@ -19,3 +19,5 @@ export default function Result({ score = 0, total = 0, onRetry = () => {} }) {
         </div>
     );
 }
+
+export default Result;

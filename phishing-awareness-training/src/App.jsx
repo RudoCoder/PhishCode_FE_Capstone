@@ -1,35 +1,55 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState} from 'react';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import NavigationButtons from './components/NavigationButtons';
+import Slide from './components/Slide';
+import Quiz from './components/Quiz';
+import slides from './data/slidesData';
+import quizData from './data/quizData';
+import './App.css';
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function App() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [mode, setMode] = useState('slides'); // 'slides' | 'quiz'
+
+  const totalSlides = slides.length;
+
+  const nextSlide = () => {
+    if (currentSlide < totalSlides - 1) {
+      setCurrentSlide((s) => s + 1);
+    } else {
+      // last slide -> start quiz
+      setMode('quiz');
+    }
+  };
+
+  const prevSlide = () => {
+    if (currentSlide > 0) setCurrentSlide((s) => s - 1);
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <div className="App">
+      <Header onStart={() => setMode('quiz')} onHome={() => { setMode('slides'); setCurrentSlide(0);}} />
 
-export default App
+      <main className='container'>
+        {mode === 'slides' && (
+          <>
+          <Slide slide={slides[currentSlide]} index={currentSlide} total={totalSlides} />
+          <NavigationButtons
+          onPrev={prevSlide}
+          onNext={nextSlide}
+          disablePrev={currentSlide === 0}
+          nextLabel={currentSlide === totalSlides -1 ? 'Start Quiz' : 'Next'}
+          />
+          </>
+        )}
+
+        {mode === 'quiz' && (
+          <Quiz quiz={quizData} onBack={() => setMode('slides')} />
+        )}
+      </main>
+
+      <Footer />
+    </div>
+  );
+}

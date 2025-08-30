@@ -119,6 +119,10 @@ export default defineConfig({
 
 - If the environment variable isn’t set, it defaults to '/PhishCode_FE_Capstone', which is the name of my GitHub repository that contains this project.
 
+### default login credentials
+- Username: admin
+- Password: admin
+
 ## Clone Git Repository
 ```bash
 https://github.com/RudoCoder/PhishCode_FE_Capstone.git

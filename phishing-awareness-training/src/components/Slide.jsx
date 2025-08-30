@@ -21,8 +21,10 @@ export default function Slide({ slide = {}, index = 0, total = 0 }) {
 
       {slide.image && (
         <div className="slide-image">
-          {/* ✅ use the path from slidesData.js directly */}
-          <img src={slide.image} alt={slide.title || "Slide image"} />
+          <img
+            src={slide.image}
+            alt={slide.title ? `${slide.title} illustration` : "Phishing awareness slide"}
+          />
         </div>
       )}
 
@@ -60,5 +62,5 @@ export default function Slide({ slide = {}, index = 0, total = 0 }) {
     );
   }
 
-  return <div className="slide">{content}</div>;
+  return <div className="slide" key={slide.id}>{content}</div>;
 }

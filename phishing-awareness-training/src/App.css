@@ -86,3 +86,54 @@ main.container {
   .container { padding: 0 12px; }
   .nav-buttons { justify-content: center; }
 }
+
+/* Login */
+.login-card {
+  background: var(--card);
+  border-radius: 10px;
+  padding: 24px;
+  box-shadow: 0 6px 18px rgba(15,23,42,0.06);
+  width: 100%;
+  max-width: 400px;
+  margin: 40px auto;
+  text-align: left;
+}
+
+.login-card h2 {
+  margin-bottom: 16px;
+  text-align: center;
+  color: #0f172a;
+}
+
+.form-group {
+  margin-bottom: 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #374151;
+}
+
+.form-group input {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+.error-message {
+  color: #dc2626;
+  font-size: 13px;
+  margin-bottom: 10px;
+  text-align: center;
+}

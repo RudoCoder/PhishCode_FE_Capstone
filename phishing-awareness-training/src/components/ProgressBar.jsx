@@ -13,3 +13,4 @@ function ProgressBar({ current = 0, total = 1 }) {
 }
 
 export default ProgressBar;
+

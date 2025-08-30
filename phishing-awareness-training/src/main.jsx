@@ -2,7 +2,6 @@
 
 import { createRoot } from 'react-dom/client';
 import { StrictMode } from 'react'; // Make sure this line is clean
-import './index.css';
 import App from './App.jsx';
 import './App.css';
 import './styles/theme.css';

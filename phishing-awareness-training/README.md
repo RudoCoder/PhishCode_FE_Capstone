@@ -31,6 +31,7 @@ I got this idea since I am studying a bachelors degree in cybersecurity and fore
 - Vercel – Deployment
 
 # Project structure
+```bash
 PhishSafe/
 ├── public/
 │   └── images/
@@ -65,6 +66,7 @@ PhishSafe/
 ├── vite.config.js
 ├── index.html
 └── ... (other config files: .gitignore, node_modules/, etc.)
+```
 
 ## How this project was built
 The PhishSafe app was developed using React + Vite in Visual Studio Code, and deployed on Vercel.

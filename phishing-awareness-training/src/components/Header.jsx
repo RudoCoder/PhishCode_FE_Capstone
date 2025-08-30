@@ -9,7 +9,7 @@ function Header({ onStart = () => {}, onHome = () => {} }) {
                 </div>
 
                 <nav className="main-nav">
-                    <button className="nav-link" onClick={onStart}>Start Training</button>
+                    <button className="nav-link" onClick={onStart}>Start Quiz</button>
                 </nav>
             </div>
         </header>

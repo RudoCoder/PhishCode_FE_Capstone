@@ -62,5 +62,3 @@ export default function Slide({ slide = {}, index = 0, total = 0 }) {
 
   return <div className="slide">{content}</div>;
 }
-
-

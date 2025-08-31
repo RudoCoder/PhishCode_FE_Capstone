@@ -51,7 +51,7 @@ const slides = [
             "Unsolicited attachments or links",
             "Look for mispelled domains (e.g, paypa1.com)"
         ],
-        image: import.meta.env.BASE_URL + "/images/phishing1.png"
+        image: "/images/phishing1.png"
     },
     {
         id: 5,

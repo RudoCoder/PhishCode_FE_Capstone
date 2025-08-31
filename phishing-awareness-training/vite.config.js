@@ -8,6 +8,6 @@ export default defineConfig({
 
 plugins: [react()],
 
-base: process.env.NODE_ENV === "production" ? "/" : "/PhishCode_FE_Capstone/",
+base: process.env.VITE_BASE_PATH || '/PhishCode_FE_Capstone',
 
 });
